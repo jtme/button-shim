@@ -16,7 +16,7 @@ Press Ctrl+C to exit.
 @buttonshim.on_press(buttonshim.BUTTON_A)
 def button_a(button, pressed):
     buttonshim.set_pixel(0x94, 0x00, 0xd3)
-    command 'raspistill -w 320 -h 240 -o IMG/snap.jpg '
+    command 'raspistill -w 320 -h 240 -o IMG/snap.jpg'
 
 
 @buttonshim.on_press(buttonshim.BUTTON_B)
