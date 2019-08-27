@@ -21,16 +21,7 @@ def button_a(button, pressed):
         BUTTON PRESSED 
         """)
     s=commands.getstatusoutput("raspistill -w 320 -h 240 -o IMG/snap.jpg")
-    print("""
-    CMD executed
-    """)
     print s
-    
-    
-    print("""
-BUTTON PRESSED 
-""")
-
 
 @buttonshim.on_press(buttonshim.BUTTON_B)
 def button_b(button, pressed):
