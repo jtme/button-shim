@@ -17,11 +17,15 @@ import commands
 @buttonshim.on_press(buttonshim.BUTTON_A)
 def button_a(button, pressed):
     buttonshim.set_pixel(0x94, 0x00, 0xd3)  
-        print("""
-        BUTTON PRESSED 
-        """)
     s=commands.getstatusoutput("raspistill -w 320 -h 240 -o IMG/snap.jpg")
     print s
+    
+    if s[0] != 0:
+                self.output(s[1], s[0])
+      else:
+                self.output("error occured", status[0])
+            
+            
 
 @buttonshim.on_press(buttonshim.BUTTON_B)
 def button_b(button, pressed):
