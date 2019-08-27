@@ -17,11 +17,19 @@ import commands
 @buttonshim.on_press(buttonshim.BUTTON_A)
 def button_a(button, pressed):
     buttonshim.set_pixel(0x94, 0x00, 0xd3)  
+        print("""
+        BUTTON PRESSED 
+        """)
     s=commands.getstatusoutput("raspistill -w 320 -h 240 -o IMG/snap.jpg")
+    print("""
+    CMD executed
+    """)
     print s
-    >> (0, 'Echo "Snapped"')
-    s[1].split("\n")
-    >> ['file_1', 'file_2', 'file_3']
+    
+    
+    print("""
+BUTTON PRESSED 
+""")
 
 
 @buttonshim.on_press(buttonshim.BUTTON_B)
