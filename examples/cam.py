@@ -12,12 +12,16 @@ Press Ctrl+C to exit.
 
 """)
 
-import os
+import commands
     
 @buttonshim.on_press(buttonshim.BUTTON_A)
 def button_a(button, pressed):
-    buttonshim.set_pixel(0x94, 0x00, 0xd3)
-    os.system("raspistill -w 320 -h 240 -o IMG/snap.jpg")
+    buttonshim.set_pixel(0x94, 0x00, 0xd3)  
+    s=commands.getstatusoutput("raspistill -w 320 -h 240 -o IMG/snap.jpg")
+    print s
+    >> (0, 'Echo "Snapped"')
+    s[1].split("\n")
+    >> ['file_1', 'file_2', 'file_3']
 
 
 @buttonshim.on_press(buttonshim.BUTTON_B)
