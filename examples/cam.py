@@ -6,7 +6,7 @@ import buttonshim
 print("""
 Button SHIM: rainbow.py
 
-Light up the LED a different colour of the rainbow with each button pressed.
+Command on button press. 
 
 Press Ctrl+C to exit.
 
@@ -16,6 +16,7 @@ Press Ctrl+C to exit.
 @buttonshim.on_press(buttonshim.BUTTON_A)
 def button_a(button, pressed):
     buttonshim.set_pixel(0x94, 0x00, 0xd3)
+    command 'raspistill -w 320 -h 240 -o IMG/snap.jpg '
 
 
 @buttonshim.on_press(buttonshim.BUTTON_B)
