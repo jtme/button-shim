@@ -12,11 +12,12 @@ Press Ctrl+C to exit.
 
 """)
 
-
+import os
+    
 @buttonshim.on_press(buttonshim.BUTTON_A)
 def button_a(button, pressed):
     buttonshim.set_pixel(0x94, 0x00, 0xd3)
-    command 'raspistill -w 320 -h 240 -o IMG/snap.jpg'
+    os.system("echo 'hello world'")
 
 
 @buttonshim.on_press(buttonshim.BUTTON_B)
