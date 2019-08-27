@@ -17,7 +17,7 @@ import os
 @buttonshim.on_press(buttonshim.BUTTON_A)
 def button_a(button, pressed):
     buttonshim.set_pixel(0x94, 0x00, 0xd3)
-    os.system("echo 'hello world'")
+    os.system("lp 'hello world'")
 
 
 @buttonshim.on_press(buttonshim.BUTTON_B)
